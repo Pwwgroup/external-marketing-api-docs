@@ -9,17 +9,18 @@
 **Method: GET**
 
 **Test-URL:** staging.greenpoweradvice.com/api/marketing
+
 **Live-URL:** www.greenpoweradvice.com/api/marketing
 
-**Prefix:** /tfli/lead
+**URL Prefix:** /tfli/lead
 
-**Params:**
+**URL Params:**
 
 ```JSON
 N/A
 ```
 
-**Query Params:**
+**URL Query Params:**
 
 ```JSON
 N/A
