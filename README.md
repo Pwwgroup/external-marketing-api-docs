@@ -2,7 +2,7 @@
 
 ## Links
 
-[link text](https://github.com/Pwwgroup/external-marketing-api-docs#external-marketing-api-docs#create-lead)
+[Create Lead](#create-lead)
 
 ## <a name="create-lead"></a>Create Lead
 
