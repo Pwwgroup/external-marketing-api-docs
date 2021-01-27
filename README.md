@@ -189,23 +189,6 @@ We only support
 
 ```JSON
 {
-  "error": [
-      "Invalid gas Supplier",
-      "Invalid Electricity Supplier",
-      "Invalid Business Name",
-      "Business Name greater than 100 characters",
-      "Invalid email address",
-      "Email address greater than 100 characters",
-      "Invalid Full name",
-      "Full name is greater than 120 characters",
-      "Invalid mobile number",
-      "mobile number greater than 30 characters"
-  ]
-}
-```
-
-```JSON
-{
     "error": {
         "message": "Invalid Mobile number",
         "body": "Must be a valid mobile phone number regex: TBC"
