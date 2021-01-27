@@ -8,9 +8,9 @@
 
 **Method: GET**
 
-**Test-URL:** https://staging.greenpoweradvice.com/api/marketing
+**Test-URL:** https://staging.greenpoweradvice.co.uk/api/marketing
 
-**Live-URL:** https://www.greenpoweradvice.com/api/marketing
+**Live-URL:** https://www.greenpoweradvice.co.uk/api/marketing
 
 **URL Prefix:** /tfli/lead
 
