@@ -169,12 +169,12 @@ We only support
 **Field Rules**
 | Field | Required | Rule |
 | :----------- | :--------: | -----------: |
-| businessOwner | N | 1 Characters Max |
-| energyType | N | ('electricity', 'gas', 'both') |
+| businessOwner | Y | 1 Characters Max |
+| energyType | Y | ('electricity', 'gas', 'both') |
 | gasSupplier | Y | [Refer to Gas Valid Suppliers](#gas) |
 | electricitySupplier | Y | [Refer to Electricity Valid Suppliers](#elec) |
 | businessName | Y | 100 Characters Max |
-| businessAddress | N | 255 Characters Max |
+| businessAddress | Y | 255 Characters Max |
 | fullName | Y | 120 Characters Max |
 | email | Y | 100 Characters Max |
 | mobile | Y | 30 Characters Max |
