@@ -204,6 +204,88 @@ We only support
 }
 ```
 
+```JSON
+{
+    "error": {
+        "message": "Invalid Mobile number",
+        "body": "Must be a valid mobile phone number regex: TBC"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Email",
+        "body": "Must be a valid email regex: TBC"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Full name",
+        "body": "Full name has to be 1 - 120 chars"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        "message": "Invalid business name",
+        "body": "Business name has to be 1 - 100 chars"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Electric supplier",
+        "body": "Please check API docs"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Gas supplier",
+        "body": "Please check API docs"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Type of Energy",
+        "body": "Has to be ‘Gas', ‘Electric’ or 'Both’"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Business Owner",
+        "body": "Has to be ‘Y' or 'N’"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        "message": "Invalid business address",
+        "body": "Business name has to be 1 - 255 chars"
+    }
+}
+```
+
+
 **Response 403:**
 
 ```JSON
