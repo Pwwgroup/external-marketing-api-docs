@@ -283,7 +283,7 @@ We only support
 {
     "error": {
         "message": "Invalid Time to Call Value",
-        "body"": "Please check API docs"
+        "body": "Please check API docs"
     }
 }
 ```
