@@ -166,6 +166,16 @@ We only support
 ];
 ```
 
+**<a name="timeToCall"></a>Time to Call**
+```JSON
+[
+  "Now", 
+  "Morning", 
+  "Afternoon", 
+  "Evening"
+];
+```
+
 **Field Rules**
 | Field | Required | Rule |
 | :----------- | :--------: | -----------: |
@@ -178,6 +188,7 @@ We only support
 | fullName | Y | 120 Characters Max |
 | email | Y | 100 Characters Max |
 | mobile | Y | 30 Characters Max |
+| timeToCall | N | [Refer to Time To Call](#timeToCall) |
 
 #### Status Codes
 
@@ -264,6 +275,15 @@ We only support
     "error": {
         "message": "Invalid business address",
         "body": "Business name has to be 1 - 255 chars"
+    }
+}
+```
+
+```JSON
+{
+    "error": {
+        message: 'Invalid Time to Call Value',
+        body: 'Please check API docs'
     }
 }
 ```
