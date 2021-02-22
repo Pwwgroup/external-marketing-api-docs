@@ -282,8 +282,8 @@ We only support
 ```JSON
 {
     "error": {
-        message: 'Invalid Time to Call Value',
-        body: 'Please check API docs'
+        "message": "Invalid Time to Call Value",
+        "body"": "Please check API docs"
     }
 }
 ```
