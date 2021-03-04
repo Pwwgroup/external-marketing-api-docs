@@ -6,7 +6,7 @@
 
 ## <a name="create-lead"></a>Create Lead
 
-**Method: GET**
+**Method: POST**
 
 **Test-URL:** https://staging.greenpoweradvice.co.uk/api/marketing
 
