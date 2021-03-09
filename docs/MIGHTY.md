@@ -32,25 +32,44 @@ N/A
 token: 123456789
 ```
 
-**Body**
+**Body Full**
 
 ```JSON
 {
-  "businessOwner": "Y",
-  "energyType": "both",
-  "gasSupplier": "British Gas",
-  "electricitySupplier": "British Gas",
-  "businessName": "Utility Locker",
-  "businessAddress": "18 School Ln, Liverpool L1 3BT",
-  "fullName": "Thomas Dittmer",
-  "email": "test@test.com",
-  "mobile": "07981231234"
+    "energyType": "Both",
+    "gasSupplier": "British Gas",
+    "electricitySupplier": "-none-",
+    "businessName": "Utility Locker",
+    "street": "18 School Ln",
+    "postcode": "L13BT",
+    "city": "Liverpool",
+    "fullName": "Thomas Dittmer",
+    "email": "shuanking678@test.com",
+    "mobile": "07981231234",
+    "gasRenewalDate": "10-2021",
+    "electricityRenewalDate": "10-2021",
+    "gasSpend": "3000",
+    "electricitySpend": "3000",
+    "notes": "test note"
 }
 ```
 
-#### FullName rules
+**Body partial**
 
-We only support
+```JSON
+{
+    "energyType": "Both",
+    "gasSupplier": "British Gas",
+    "electricitySupplier": "-none-",
+    "businessName": "Utility Locker",
+    "street": "18 School Ln",
+    "postcode": "L13BT",
+    "city": "Liverpool",
+    "fullName": "Thomas Dittmer",
+    "email": "shuanking678@test.com",
+    "mobile": "07981231234"
+}
+```
 
 #### Valid Suppliers
 
@@ -178,6 +197,11 @@ We only support
 | fullName | Y | 120 Characters Max |
 | email | Y | 100 Characters Max |
 | mobile | Y | 30 Characters Max |
+| gasRenewalDate | N | 7 Characters Max format('MM-YYYY') |
+| electricityRenewalDate | N | 7 Characters Max format('MM-YYYY') |
+| gasSpend | N | 13 Characters Max |
+| electricitySpend | N | 13 Characters Max |
+| notes | N | 64kb Characters Max around 64000 characters depending on encoding|
 
 #### Status Codes
 
@@ -187,59 +211,7 @@ We only support
 
 !!! Validation errors !!!
 
-```JSON
-{
-    "error": {
-        "message": "Invalid Mobile number",
-        "body": "Must be a valid mobile phone number regex: TBC"
-    }
-}
-```
-
-```JSON
-{
-    "error": {
-        "message": "Invalid Email",
-        "body": "Must be a valid email regex: TBC"
-    }
-}
-```
-
-```JSON
-{
-    "error": {
-        "message": "Invalid Full name",
-        "body": "Full name has to be 1 - 120 chars"
-    }
-}
-```
-
-```JSON
-{
-    "error": {
-        "message": "Invalid business name",
-        "body": "Business name has to be 1 - 100 chars"
-    }
-}
-```
-
-```JSON
-{
-    "error": {
-        "message": "Invalid Electric supplier",
-        "body": "Please check API docs"
-    }
-}
-```
-
-```JSON
-{
-    "error": {
-        "message": "Invalid Gas supplier",
-        "body": "Please check API docs"
-    }
-}
-```
+energyType:
 
 ```JSON
 {
@@ -250,24 +222,148 @@ We only support
 }
 ```
 
-```JSON
-{
-    "error": {
-        "message": "Invalid Business Owner",
-        "body": "Has to be ‘Y' or 'N’"
-    }
-}
-```
+gasSupplier:
 
 ```JSON
 {
     "error": {
-        "message": "Invalid business address",
-        "body": "Business name has to be 1 - 255 chars"
+        "message": "Invalid Gas supplier",
+        "body": "Please check API docs"
     }
 }
 ```
 
+electricitySupplier:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Electric supplier",
+        "body": "Please check API docs"
+    }
+}
+```
+
+businessName:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid business name",
+        "body": "Business name has to be 1 - 100 chars"
+    }
+}
+```
+
+street:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid street",
+        "body": "street has to be 1 - 255 chars"
+    }
+}
+```
+
+postcode:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Postcode",
+        "body": "please provide a valid postcode"
+    }
+}
+```
+
+city:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid city",
+        "body": "City has to be 1 - 255 chars"
+    }
+}
+```
+
+fullname:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Full name",
+        "body": "Full name has to be 1 - 120 chars"
+    }
+}
+```
+
+email:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Email",
+        "body": "Must be a valid email regex: TBC"
+    }
+}
+```
+
+mobile:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Mobile number",
+        "body": "Must be a valid mobile phone number regex: TBC"
+    }
+}
+```
+
+gasRenewalDate:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Gas Renewal Date",
+        "body": "Gas Renewal Date format MM-YYYY"
+    }
+}
+```
+
+electricityRenewalDate:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Electricity Renewal Date",
+        "body": "Electricity Renewal Date format incorrect  MM-YYYY"
+    }
+}
+```
+
+gasSpend:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Gas Spend",
+        "body": "Gas Spend has must be a decimal 1.00"
+    }
+}
+```
+
+electricitySpend
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Electricity Spend",
+        "body": "Electricity Spend has must be a decimal 1.00"
+    }
+}
+```
 
 **Response 403:**
 
