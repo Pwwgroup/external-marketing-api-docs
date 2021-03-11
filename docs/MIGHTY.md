@@ -195,7 +195,7 @@ token: 123456789
 | businessName | Y | 100 Characters Max |
 | businessAddress | Y | 255 Characters Max |
 | fullName | Y | 120 Characters Max |
-| email | Y | 100 Characters Max |
+| email | N | 100 Characters Max |
 | mobile | Y | 30 Characters Max |
 | gasRenewalDate | N | 7 Characters Max format('MM-YYYY') |
 | electricityRenewalDate | N | 7 Characters Max format('MM-YYYY') |
