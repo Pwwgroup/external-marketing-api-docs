@@ -4,6 +4,8 @@
 
 [Create Lead](#create-lead)
 
+[Field Rules](#field-rules)
+
 ## <a name="create-lead"></a>Create Lead
 
 **Method: POST**
@@ -46,6 +48,7 @@ token: 123456789
     "fullName": "Thomas Dittmer",
     "email": "shuanking678@test.com",
     "mobile": "07981231234",
+    "phone": "01514442222",
     "gasRenewalDate": "10-2021",
     "electricityRenewalDate": "10-2021",
     "gasSpend": "3000",
@@ -185,24 +188,27 @@ token: 123456789
 ];
 ```
 
-**Field Rules**
-| Field | Required | Rule |
-| :----------- | :--------: | -----------: |
-| businessOwner | Y | 1 Characters Max |
-| energyType | Y | ('electricity', 'gas', 'both') |
-| gasSupplier | Y | [Refer to Gas Valid Suppliers](#gas) |
-| electricitySupplier | Y | [Refer to Electricity Valid Suppliers](#elec) |
-| businessName | Y | 100 Characters Max |
-| businessAddress | Y | 255 Characters Max |
-| fullName | Y | 120 Characters Max |
-| email | N | 100 Characters Max |
-| mobile | N | 30 Characters Max && at least phone or mobile must be populated|
-| phone | N | 30 Characters Max |
-| gasRenewalDate | N | 7 Characters Max format('MM-YYYY') |
-| electricityRenewalDate | N | 7 Characters Max format('MM-YYYY') |
-| gasSpend | N | 13 Characters Max |
-| electricitySpend | N | 13 Characters Max |
-| notes | N | 64kb Characters Max around 64000 characters depending on encoding|
+## <a name="field-rules"></a>Field Rules
+
+<!-- **Field Rules** -->
+
+| Field                  | Required |                                                              Rule |
+| :--------------------- | :------: | ----------------------------------------------------------------: |
+| businessOwner          |    Y     |                                                  1 Characters Max |
+| energyType             |    Y     |                                    ('electricity', 'gas', 'both') |
+| gasSupplier            |    Y     |                              [Refer to Gas Valid Suppliers](#gas) |
+| electricitySupplier    |    Y     |                     [Refer to Electricity Valid Suppliers](#elec) |
+| businessName           |    Y     |                                                100 Characters Max |
+| businessAddress        |    Y     |                                                255 Characters Max |
+| fullName               |    Y     |                                                120 Characters Max |
+| email                  |    N     |                                                100 Characters Max |
+| mobile                 |    N     |   30 Characters Max && at least phone or mobile must be populated |
+| phone                  |    N     |                                                 30 Characters Max |
+| gasRenewalDate         |    N     |                                7 Characters Max format('MM-YYYY') |
+| electricityRenewalDate |    N     |                                7 Characters Max format('MM-YYYY') |
+| gasSpend               |    N     |                                                 13 Characters Max |
+| electricitySpend       |    N     |                                                 13 Characters Max |
+| notes                  |    N     | 64kb Characters Max around 64000 characters depending on encoding |
 
 #### Status Codes
 
