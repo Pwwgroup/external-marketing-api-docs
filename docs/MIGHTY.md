@@ -196,7 +196,8 @@ token: 123456789
 | businessAddress | Y | 255 Characters Max |
 | fullName | Y | 120 Characters Max |
 | email | N | 100 Characters Max |
-| mobile | Y | 30 Characters Max |
+| mobile | N | 30 Characters Max && at least phone or mobile must be populated|
+| phone | N | 30 Characters Max |
 | gasRenewalDate | N | 7 Characters Max format('MM-YYYY') |
 | electricityRenewalDate | N | 7 Characters Max format('MM-YYYY') |
 | gasSpend | N | 13 Characters Max |
@@ -272,7 +273,7 @@ postcode:
 {
     "error": {
         "message": "Invalid Postcode",
-        "body": "please provide a valid postcode"
+        "body": "please provide a valid postcode Regex: /\\b((?:(?:gir)|(?:[a-pr-uwyz])(?:(?:[0-9](?:[a-hjkpstuw]|[0-9])?)|(?:[a-hk-y][0-9](?:[0-9]|[abehmnprv-y])?))))([0-9][abd-hjlnp-uw-z]{2})\\b/i"
     }
 }
 ```
@@ -305,7 +306,7 @@ email:
 {
     "error": {
         "message": "Invalid Email",
-        "body": "Must be a valid email regex: TBC"
+        "body": "Must be a valid email regex: /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])/"
     }
 }
 ```
@@ -316,7 +317,29 @@ mobile:
 {
     "error": {
         "message": "Invalid Mobile number",
-        "body": "Must be a valid mobile phone number regex: TBC"
+        "body": "Must be a valid mobile phone number regex: /((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}/"
+    }
+}
+```
+
+phone:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid phone number",
+        "body": "Must be a valid phone number regex: /^((^0)|(^\\+44))(([1x])([0-9x]){8,9}|([2-3x]){10}|(8((00|45)([0-9x]){4}|([0-9x]){9}))$)/"
+    }
+}
+```
+
+mobile && phone empty:
+
+```JSON
+{
+    "error": {
+        "message": "Invalid Phone & Mobile Number",
+        "body": "Both Mobile or Phone cannot be empty. You must provide at least one form of contact"
     }
 }
 ```
