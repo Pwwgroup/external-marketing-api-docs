@@ -416,7 +416,7 @@ electricitySpend
 ```JSON
 {
   "error": "Method Not Allowed",
-  "message": "This endpoint only supports POST method requests",
+  "message": "This endpoint does not support { METHOD } method requests",
 }
 ```
 
