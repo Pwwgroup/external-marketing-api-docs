@@ -10,11 +10,11 @@
 
 **Method: POST**
 
-**Test-URL:** https://staging.greenpoweradvice.co.uk/api/marketing
+**Test-URL:** https://staging.greenpoweradvice.co.uk/api
 
-**Live-URL:** https://www.greenpoweradvice.co.uk/api/marketing
+**Live-URL:** https://www.greenpoweradvice.co.uk/api
 
-**URL Prefix:** /v1/mighty/lead
+**URL Prefix:** /lead/mighty/v1
 
 **URL Params:**
 
