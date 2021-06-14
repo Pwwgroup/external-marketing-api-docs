@@ -8,11 +8,11 @@
 
 **Method: POST**
 
-**Test-URL:** https://staging.greenpoweradvice.co.uk/api/marketing
+**Test-URL:** https://staging.greenpoweradvice.co.uk/api
 
-**Live-URL:** https://www.greenpoweradvice.co.uk/api/marketing
+**Live-URL:** https://www.greenpoweradvice.co.uk/api
 
-**URL Prefix:** /tfli/lead
+**URL Prefix:** /lead/tfli/v1
 
 **URL Params:**
 
