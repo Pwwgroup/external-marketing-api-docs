@@ -44,7 +44,8 @@ token: 123456789
   "businessAddress": "18 School Ln, Liverpool L1 3BT",
   "fullName": "Thomas Dittmer",
   "email": "test@test.com",
-  "mobile": "07981231234"
+  "mobile": "07981231234",
+  "timeToCall": "Now"
 }
 ```
 
@@ -198,23 +199,27 @@ We only support
 
 !!! Validation errors !!!
 
+mobile:
+
 ```JSON
 {
     "error": {
         "message": "Invalid Mobile number",
-        "body": "Must be a valid mobile phone number regex: TBC"
+        "body": "Must be a valid mobile phone number regex: /((\\+44(\\s\\(0\\)\\s|\\s0\\s|\\s)?)|0)7\\d{3}(\\s)?\\d{6}/"
     }
 }
 ```
+email:
 
 ```JSON
 {
     "error": {
         "message": "Invalid Email",
-        "body": "Must be a valid email regex: TBC"
+        "body": "Must be a valid email regex: /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])/"
     }
 }
 ```
+fullName:
 
 ```JSON
 {
@@ -224,6 +229,7 @@ We only support
     }
 }
 ```
+businessName:
 
 ```JSON
 {
@@ -233,6 +239,7 @@ We only support
     }
 }
 ```
+electricitySupplier:
 
 ```JSON
 {
@@ -242,6 +249,7 @@ We only support
     }
 }
 ```
+gasSupplier:
 
 ```JSON
 {
@@ -251,6 +259,7 @@ We only support
     }
 }
 ```
+energyType:
 
 ```JSON
 {
@@ -260,6 +269,7 @@ We only support
     }
 }
 ```
+businessOwner:
 
 ```JSON
 {
@@ -269,6 +279,7 @@ We only support
     }
 }
 ```
+businessAddress:
 
 ```JSON
 {
@@ -278,6 +289,7 @@ We only support
     }
 }
 ```
+timeToCall:
 
 ```JSON
 {
@@ -302,7 +314,10 @@ We only support
 
 ```JSON
 {
-  "error": "URL Not Found"
+    "error": {
+        "message": "Not found",
+        "body": "URL not Found"
+    }
 }
 ```
 

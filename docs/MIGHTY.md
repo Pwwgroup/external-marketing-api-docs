@@ -407,7 +407,10 @@ electricitySpend
 
 ```JSON
 {
-  "error": "URL Not Found"
+    "error": {
+        "message": "Not found",
+        "body": "URL not Found"
+    }
 }
 ```
 
